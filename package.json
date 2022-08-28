@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "npm run build && push-dir --dir=dist --branch=master --cleanup"
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.10.2",
