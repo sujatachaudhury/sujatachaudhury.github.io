@@ -9,11 +9,14 @@ body {
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
 	color: #444;
+	background-image: url(/background.webp);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 h1,
 h2,
@@ -64,4 +67,24 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+
+
+ul.min {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.min li {
+    display: flex;
+}
+
+ul.min li time {
+    flex: 0 0 130px;
+    font-style: italic;
+    color: #888;
+}
+
+ul.min li a:visited {
+    color: #8e32dc;
 }
