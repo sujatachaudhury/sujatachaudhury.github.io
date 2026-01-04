@@ -1,0 +1,115 @@
+.neonSign {
+  display: inline-block;
+  font-family: var(--font-family-sans);
+  font-weight: var(--typography-h2-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 2px solid currentColor;
+  border-radius: var(--border-radius-button);
+  animation: flicker 3s infinite alternate;
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    inset 0 0 5px currentColor;
+}
+
+.text {
+  display: block;
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+  transition: all var(--transition-normal);
+}
+
+/* Size variants */
+.small {
+  font-size: var(--typography-body-size);
+}
+
+.medium {
+  font-size: var(--typography-h2-size);
+}
+
+.large {
+  font-size: var(--typography-h1-size);
+}
+
+/* Color variants */
+.primary {
+  color: var(--color-interactive-primary);
+}
+
+.accent {
+  color: var(--background-color-accent);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.inverse {
+  color: var(--text-color-inverse);
+}
+
+/* Flicker animation */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor,
+      0 0 25px currentColor;
+    box-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      inset 0 0 5px currentColor,
+      inset 0 0 10px currentColor;
+    opacity: 1;
+  }
+  
+  20%, 24%, 55% {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor;
+    box-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      inset 0 0 3px currentColor;
+    opacity: 0.8;
+  }
+}
+
+/* Hover effect */
+.neonSign:hover .text {
+  text-shadow: 
+    0 0 3px currentColor,
+    0 0 6px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.neonSign:hover {
+  box-shadow: 
+    0 0 3px currentColor,
+    0 0 6px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    inset 0 0 3px currentColor,
+    inset 0 0 6px currentColor;
+}

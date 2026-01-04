@@ -1,0 +1,71 @@
+:root {
+    --hero-background-margin-top: 10vh; /* at center of screen height */
+    --hero-header-margin-top: calc(50vh); /* center of screen height + padding */
+    --hero-background-gradient-angle: -3deg; /* angle at which background image ending is no longer visible */
+}
+
+html {
+    height: auto;
+    min-height: 100%;
+}
+
+body {
+    height: auto;
+}
+
+.container {
+}
+
+.header {
+    color: var(--text-color-primary);
+    height: var(--hero-header-margin-top);
+    background-image: linear-gradient(var(--hero-background-gradient-angle), var(--background-color-accent) 50%, transparent 50%), url(/assets/sujata-background-hero.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center var(--spacing-4xl), right var(--hero-background-margin-top);
+    background-attachment: scroll;
+}
+
+.header * {
+    margin: 0;
+    padding: var(--spacing-md);
+}
+
+.content {
+    color: var(--text-color-inverse);
+    background-color: var(--background-color-accent);
+    padding: var(--spacing-md);
+}
+
+.title {
+    font-size: var(--typography-h1-size);
+    font-weight: var(--typography-h1-weight);
+    line-height: var(--typography-h1-line-height);
+}
+
+.tagline {
+    font-size: var(--typography-h3-size);
+    font-weight: var(--typography-h3-weight);
+    line-height: var(--typography-h3-line-height);
+}
+
+.firstSection {
+    font-size: var(--typography-h3-size);
+    font-weight: var(--typography-h3-weight);
+    line-height: var(--typography-h3-line-height);
+    text-align: center;
+}
+
+.firstSectionTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.firstSectionTitle > p {
+    padding-right: var(--spacing-sm);
+}
+
+.neonSignContainer {
+    transform: rotate(-2deg);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}

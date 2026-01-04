@@ -1,0 +1,36 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background-color: var(--background-color-primary);
+  border-bottom: 1px solid var(--border-color-primary);
+  z-index: var(--z-fixed);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  color: var(--text-color-primary);
+  text-decoration: none;
+  font-weight: var(--typography-body-weight);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-interactive-primary);
+}
+
+.separator {
+  color: var(--text-color-tertiary);
+}

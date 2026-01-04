@@ -1,0 +1,47 @@
+{
+  "common": {
+    "welcome": "Tervetuloa",
+    "about": "Tietoja",
+    "contact": "Yhteystiedot",
+    "home": "Koti"
+  },
+  "navigation": {
+    "about": "Tietoja",
+    "education": "Koulutus",
+    "experience": "Kokemus",
+    "projects": "Projektit",
+    "publication": "Julkaisu",
+    "contacts": "Yhteystiedot"
+  },
+  "about": {
+    "title": "Tietoja minusta",
+    "description": "Hei, olen Sujata. Olen tietojenkäsittelytieteen ja -tekniikan maisteriopiskelija Tampereen yliopistossa erikoistuen kuvantamiseen. Minulla on 3 vuoden työkokemus Intiasta. Minulla on kokemusta koneoppimisesta, 3D-kuvan rekonstruktiosta ja ohjelmistokehityksestä. Olen aina innokas syventymään ongelmiin ja samalla avoin laajentamaan tietämystäni uusista teknologioista ja haasteista."
+  },
+  "main": {
+    "title": "Hei, olen Sujata 👋",
+    "tagline": "Vakuutan tietokoneet siitä, että hotdog 🌭 ei ole voileipä 🥪",
+    "sections": {
+      "first": {
+        "title": "Opiskelen kuinka saada koneet näkemään",
+        "subtitle": "Ja ymmärrän, että näköni on periaatteessa taikuutta!"
+      },
+      "publications": {
+        "title": "Julkaisut"
+      },
+      "degrees": {
+        "title": "Tutkinnot ja todistukset"
+      },
+      "experience": {
+        "title": "Työkokemus"
+      },
+      "neonSign": "Ota yhteyttä",
+      "socials": {
+        "title": "Sosiaalinen media",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "twitter": "Twitter",
+        "email": "Sähköposti"
+      }
+    }
+  }
+}

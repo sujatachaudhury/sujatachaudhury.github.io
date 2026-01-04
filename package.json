@@ -1,22 +1,30 @@
 {
-  "name": "@example/blog",
-  "version": "0.0.1",
+  "name": "my-book",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "deploy": "npm run build && push-dir --dir=dist --branch=master --cleanup"
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "deploy": "npm run build && push-dir --dir=dist --branch=master --cleanup",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "push-dir": "^0.4.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.10.2",
-    "@astrojs/rss": "^1.0.0",
-    "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/svelte": "^1.0.0",
-    "astro": "^1.1.1",
-    "push-dir": "^0.4.1",
-    "svelte": "^3.49.0"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "postcss-import": "^16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

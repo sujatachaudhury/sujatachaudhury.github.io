@@ -1,0 +1,46 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "about": "About",
+    "contact": "Contact",
+    "home": "Home"
+  },
+  "navigation": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "projects": "Projects",
+    "publication": "Publication",
+    "contacts": "Contacts"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hi, I'm Sujata I'm a Master of Science student in Computer Science and Engineering at Tampere University specializing in Imaging. I have 3 years of job experience in India. I am experienced in machine learning, 3D image reconstruction, and software development. I am always keen on deep-diving into problems and at the same time open to broadening my knowledge of new technologies and challenges."
+  },
+  "main": {
+    "title": "Hi, I'm Sujata 👋",
+    "tagline": "I convince computers that a hotdog 🌭 is not a sandwich 🥪",
+    "sections": {
+      "first": {
+        "title": "I'm studying how to make machines see",
+        "subtitle": "And realizing my vision is basically magic!"
+      },
+      "publications": {
+        "title": "Publications"
+      },
+      "degrees": {
+        "title": "Education"
+      },
+      "experience": {
+        "title": "Work Experience"
+      },
+      "neonSign": "Contact Me",
+      "socials": {
+        "title": "Contact Me",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "email": "Email"
+      }
+    }
+  }
+}

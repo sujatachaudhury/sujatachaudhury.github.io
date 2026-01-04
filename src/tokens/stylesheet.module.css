@@ -1,0 +1,188 @@
+/* Typography Classes */
+
+/* Headings */
+.h1 {
+  font-size: var(--typography-h1-size);
+  font-weight: var(--typography-h1-weight);
+  line-height: var(--typography-h1-line-height);
+  color: var(--text-color-primary);
+  margin: 0;
+}
+
+.h2 {
+  font-size: var(--typography-h2-size);
+  font-weight: var(--typography-h2-weight);
+  line-height: var(--typography-h2-line-height);
+  color: var(--text-color-primary);
+  margin: 0;
+}
+
+.h3 {
+  font-size: var(--typography-h3-size);
+  font-weight: var(--typography-h3-weight);
+  line-height: var(--typography-h3-line-height);
+  color: var(--text-color-primary);
+  margin: 0;
+}
+
+/* Body Text */
+.body {
+  font-size: var(--typography-body-size);
+  font-weight: var(--typography-body-weight);
+  line-height: var(--typography-body-line-height);
+  color: var(--text-color-primary);
+  margin: 0;
+}
+
+.small {
+  font-size: var(--typography-small-size);
+  font-weight: var(--typography-small-weight);
+  line-height: var(--typography-small-line-height);
+  color: var(--text-color-secondary);
+  margin: 0;
+}
+
+/* Text Colors */
+.textPrimary {
+  color: var(--text-color-primary);
+}
+
+.textSecondary {
+  color: var(--text-color-secondary);
+}
+
+.textTertiary {
+  color: var(--text-color-tertiary);
+}
+
+.textAccent {
+  color: var(--text-color-accent);
+}
+
+.textInverse {
+  color: var(--text-color-inverse);
+}
+
+.textMuted {
+  color: var(--text-color-muted);
+}
+
+/* Text Alignment */
+.textLeft {
+  text-align: left;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+/* Font Weights */
+.fontLight {
+  font-weight: var(--font-weight-light);
+}
+
+.fontNormal {
+  font-weight: var(--font-weight-normal);
+}
+
+.fontMedium {
+  font-weight: var(--font-weight-medium);
+}
+
+.fontSemibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.fontBold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Font Families */
+.fontSans {
+  font-family: var(--font-family-sans);
+}
+
+.fontMono {
+  font-family: var(--font-family-mono);
+}
+
+/* Links */
+.link {
+  color: var(--color-interactive-primary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  transition: all var(--transition-normal);
+  /* Reset browser defaults */
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.link:hover {
+  color: var(--color-interactive-primary-hover);
+  text-decoration-color: currentColor;
+}
+
+.link:focus {
+  outline: 2px solid var(--color-interactive-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-small);
+}
+
+.linkSecondary {
+  color: var(--text-color-secondary);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  transition: all var(--transition-normal);
+  /* Reset browser defaults */
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.linkSecondary:hover {
+  color: var(--text-color-primary);
+  text-decoration-color: currentColor;
+}
+
+.linkMuted {
+  color: var(--text-color-muted);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  /* Reset browser defaults */
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.linkMuted:hover {
+  color: var(--text-color-secondary);
+  text-decoration: underline;
+}
+
+.linkInverse {
+  color: var(--text-color-inverse);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.2em;
+  transition: all var(--transition-normal);
+  /* Reset browser defaults */
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.linkInverse:hover {
+  color: var(--color-interactive-primary);
+  text-decoration-color: currentColor;
+}
