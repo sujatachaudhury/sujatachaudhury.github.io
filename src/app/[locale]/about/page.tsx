@@ -13,8 +13,15 @@ export default async function About(props: LocalizationProps) {
   
   return (
     <div className={styles.container}>
-      <header className={`${stylesheet.h1} ${stylesheet.textAccent}`}>{translation.about.title}</header>
-      <p className={`${stylesheet.body} ${stylesheet.textAccent}`}>{translation.about.description}</p>
+      <div className={styles.content}>
+        <header className={`${stylesheet.h1} ${stylesheet.textAccent} ${styles.title}`}>{translation.about.title}</header>
+        <div className={styles.imageAndTextContent}>
+          <div className={`${stylesheet.body} ${stylesheet.textAccent}`}>
+            {translation.about.description}
+          </div>
+          <img src="/assets/sujata-background-hero.png"></img>
+        </div>
+      </div>
     </div>
   );
 }
