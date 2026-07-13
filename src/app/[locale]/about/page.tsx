@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 
 export default async function About(props: LocalizationProps) {
   const translation = await getTranslationsFromProps(props);
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -19,7 +19,10 @@ export default async function About(props: LocalizationProps) {
           <div className={`${stylesheet.body} ${stylesheet.textAccent}`}>
             {translation.about.description}
           </div>
-          <img src="/assets/sujata-background-hero.png"></img>
+          <div className={styles.imageStack}>
+            <img className={styles.sobelOverlay} src="/assets/sobel-overlay.png" />
+            <img className={styles.heroImage} src="/assets/sujata-background-hero.png"/>
+          </div>
         </div>
       </div>
     </div>

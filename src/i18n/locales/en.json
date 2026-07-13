@@ -3,7 +3,8 @@
     "welcome": "Welcome",
     "about": "About",
     "contact": "Contact",
-    "home": "Home"
+    "home": "Home",
+    "projects": "Projects"
   },
   "navigation": {
     "about": "About",
@@ -15,7 +16,17 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Hi, I'm Sujata I'm a Master of Science student in Computer Science and Engineering at Tampere University specializing in Imaging. I have 3 years of job experience in India. I am experienced in machine learning, 3D image reconstruction, and software development. I am always keen on deep-diving into problems and at the same time open to broadening my knowledge of new technologies and challenges."
+    "description": "Hi, I'm Sujata, a Master of Science student in Computer Science and Engineering at Tampere University, specializing in Imaging. I have three years of professional experience in software development in India and a strong background in machine learning, 3D image reconstruction, and computer vision. I enjoy tackling complex technical challenges by combining analytical thinking with practical problem-solving. My current interests include computer vision, 3D scene reconstruction, machine learning, and imaging technologies, where I strive to develop innovative solutions to real-world problems. I am passionate about continuous learning and always eager to explore emerging technologies, broaden my expertise, and take on new challenges. I thrive in collaborative environments and enjoy working on projects that bridge research and practical applications."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A live selection of public repositories from my GitHub profile.",
+    "repositoryList": "Public GitHub repositories",
+    "noDescription": "No description provided yet.",
+    "empty": "GitHub projects could not be loaded right now.",
+    "language": "Language",
+    "stars": "Stars",
+    "forks": "Forks"
   },
   "main": {
     "title": "Hi, I'm Sujata 👋",
@@ -42,5 +53,17 @@
         "email": "Email"
       }
     }
-  }
+  },
+  "project-cards": [
+    {
+      "title": "Visual analysis of moving vehicles (shape, trajectory, speed from time-to-impact etc.)",
+      "description": "The accurate detection and analysis of vehicle collisions in surveillance footage presents a significant challenge in traffic monitoring and accident investigation. While existing approaches often rely on motion-based detection or deep learning methods, we explore a geometric approach that leverages known camera intrinsics and vehicle specifications to precisely detect and analyze potential collision scenarios. We propose a novel pipeline that first detects key vehicle features, particularly headlights which serve as reliable reference points for geometric calculations. By exploiting the known dimensions of specific vehicle and using principles from projective geometry, we compute vanishing points and lines to determine the vehicle's orientation and position in 3D space. By back-projection of image points to 3D space using known camera intrinsics we calculate real-world distance between vehicles using the theorem of cosines.",
+      "img": "/assets/project-images/vehicle-detection.png"
+    },
+    {
+      "title": "Cardiac Calcification and Overall Survival in Lung Cancer Patients Undergoing Radiotherapy",
+      "description": "This project investigates whether cardiac calcification (measured via the Agatston Score) and other clinical and dosimetric variables are associated with overall survival in lung cancer patients treated with radiation therapy (RT). The analysis combines: Automated cardiac calcification scoring from CT DICOM images (Python) and Statistical survival analysis using Cox Proportional Hazards models (R)",
+      "img": "/assets/project-images/survival-analysis.png"
+    }
+  ]
 }

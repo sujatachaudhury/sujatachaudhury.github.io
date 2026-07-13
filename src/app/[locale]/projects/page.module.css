@@ -1,0 +1,70 @@
+.container {
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.description {
+    margin: var(--spacing-md) auto 0;
+    max-width: 680px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) auto 0;
+    max-width: 1040px;
+    text-align: left;
+}
+
+.project {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid color-mix(in srgb, var(--foreground) 20%, transparent);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    background: color-mix(in srgb, var(--background) 88%, var(--foreground) 12%);
+}
+
+.projectName {
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.projectName:hover {
+    text-decoration: underline;
+}
+
+.projectDescription {
+    margin: var(--spacing-sm) 0 var(--spacing-md);
+    color: var(--foreground);
+    line-height: 1.6;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin: 0;
+}
+
+.metaItem {
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+    color: var(--foreground);
+    font-size: 0.9rem;
+}
+
+.metaItem dt {
+    font-weight: 700;
+}
+
+.metaItem dd {
+    margin: 0;
+}

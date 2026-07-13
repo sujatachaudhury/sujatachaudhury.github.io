@@ -3,7 +3,8 @@
     "welcome": "Tervetuloa",
     "about": "Tietoja",
     "contact": "Yhteystiedot",
-    "home": "Koti"
+    "home": "Koti",
+    "projects": "Projektit"
   },
   "navigation": {
     "about": "Tietoja",
@@ -16,6 +17,16 @@
   "about": {
     "title": "Tietoja minusta",
     "description": "Hei, olen Sujata. Olen tietojenkäsittelytieteen ja -tekniikan maisteriopiskelija Tampereen yliopistossa erikoistuen kuvantamiseen. Minulla on 3 vuoden työkokemus Intiasta. Minulla on kokemusta koneoppimisesta, 3D-kuvan rekonstruktiosta ja ohjelmistokehityksestä. Olen aina innokas syventymään ongelmiin ja samalla avoin laajentamaan tietämystäni uusista teknologioista ja haasteista."
+  },
+  "projects": {
+    "title": "Projektit",
+    "description": "Valikoima julkisia repositorioita GitHub-profiilistani.",
+    "repositoryList": "Julkiset GitHub-repositoriot",
+    "noDescription": "Kuvausta ei ole vielä lisätty.",
+    "empty": "GitHub-projekteja ei voitu ladata juuri nyt.",
+    "language": "Kieli",
+    "stars": "Tahdet",
+    "forks": "Forkit"
   },
   "main": {
     "title": "Hei, olen Sujata 👋",
@@ -43,5 +54,17 @@
         "email": "Sähköposti"
       }
     }
-  }
+  },
+  "project-cards": [
+    {
+      "title": "Liikkuvien ajoneuvojen visuaalinen analyysi (muoto, liikerata, nopeus törmäysajan perusteella jne.)",
+      "description": "Ajoneuvojen yhteentörmäysten tarkka havaitseminen ja analysointi valvontakuvamateriaalista on merkittävä haaste liikenteen valvonnassa ja onnettomuustutkinnassa. Kun olemassa olevat menetelmät nojaavat usein liikkeeseen perustuvaan havaitsemiseen tai syväoppimismenetelmiin, me tutkimme geometrista lähestymistapaa, joka hyödyntää tunnettuja kameran sisäisiä parametreja ja ajoneuvojen mittatietoja mahdollisten törmäystilanteiden tarkkaan havaitsemiseen ja analysointiin. Ehdotamme uutta putkea, joka ensin tunnistaa ajoneuvon keskeiset piirteet, erityisesti ajovalot, jotka toimivat luotettavina vertailupisteinä geometrisille laskelmille. Hyödyntämällä tietyn ajoneuvon tunnettuja mittoja ja projektiivisen geometrian periaatteita laskemme katoamispisteet ja -viivat määrittääksemme ajoneuvon suunnan ja sijainnin 3D-tilassa. Takaisinprojisoimalla kuvapisteet 3D-tilaan tunnettujen kameran sisäisten parametrien avulla laskemme ajoneuvojen välisen todellisen etäisyyden kosinilauseen avulla.",
+      "img": "/assets/project-images/vehicle-detection.png"
+    },
+    {
+      "title": "Sydämen kalkkeutuminen ja kokonaiselossaolo sädehoitoa saavilla keuhkosyöpäpotilailla",
+      "description": "Tässä projektissa tutkitaan, liittyvätkö sydämen kalkkeutuminen (mitattuna Agatston-pisteytyksellä) sekä muut kliiniset ja dosimetriset muuttujat kokonaiselossaoloon sädehoitoa (RT) saavilla keuhkosyöpäpotilailla. Analyysi yhdistää: automaattisen sydämen kalkkeutumisen pisteytyksen CT DICOM -kuvista (Python) ja tilastollisen elossaoloanalyysin Coxin suhteellisten riskien mallilla (R)",
+      "img": "/assets/project-images/survival-analysis.png"
+    }
+  ]
 }

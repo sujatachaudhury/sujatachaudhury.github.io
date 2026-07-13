@@ -17,6 +17,10 @@ export function Navigation({ locale }: { locale: Locale }) {
         <Link href={`/${locale}/about`} className={styles.link}>
           {t.common.about}
         </Link>
+        <span className={styles.separator}>|</span>
+        <Link href={`/${locale}/projects`} className={styles.link}>
+          {t.common.projects}
+        </Link>
       </div>
       <LanguageSelector currentLocale={locale} />
     </nav>

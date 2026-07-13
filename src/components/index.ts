@@ -5,3 +5,4 @@ export * from "./navigation";
 export * from "./neon-sign";
 export * from "./publications";
 export * from "./socials";
+export * from './project-cards';

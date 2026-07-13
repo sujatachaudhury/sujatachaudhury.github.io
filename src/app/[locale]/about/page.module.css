@@ -10,6 +10,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    padding: 0 20%;
+    box-sizing: border-box;
 }
 
 .imageAndTextContent {
@@ -17,6 +19,37 @@
     grid-template-columns: auto auto;
 }
 
+.title {
+    margin-top: 10%;
+}
+
 .title, .imageAndTextContent {
     padding: 0 var(--spacing-md);
 }
+
+.imageStack {
+    position: relative
+}
+
+.sobelOverlay {
+    position: relative;
+    z-index: 1;
+    /* animation: revealSobel 3s ease-out backwards; */
+    top: 2rem;
+}
+
+.heroImage {
+    position: absolute;
+    left: 7rem;
+    z-index: 2;
+    
+}
+
+@keyframes revealSobel {                                                   
+    from {                                                                 
+        transform: translateX(7rem);                                      
+    }                                                                      
+    to {                                                                   
+        transform: translateX(0);                                          
+    }                                                                      
+}         
