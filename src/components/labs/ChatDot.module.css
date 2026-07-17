@@ -1,0 +1,60 @@
+.root {
+  position: fixed;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  z-index: var(--z-nav);
+  inline-size: 14px;
+  block-size: 14px;
+  padding: 0;
+  border: var(--border-hairline) solid var(--color-rule-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-text);
+  cursor: pointer;
+  color: var(--color-bg);
+  transition: transform var(--motion-fast), background var(--motion-fast);
+}
+
+.root:hover {
+  transform: scale(1.15);
+  background: var(--color-text-signal);
+}
+
+.tooltip {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + var(--space-2));
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+  min-inline-size: 160px;
+  text-align: end;
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-control);
+  font-size: var(--font-size-xs);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity var(--motion-fast), transform var(--motion-fast);
+  white-space: nowrap;
+}
+
+.root:hover .tooltip,
+.root:focus-visible .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltipPrimary {
+  font-family: var(--font-body), sans-serif;
+  font-weight: var(--fw-medium);
+}
+
+.tooltipMeta {
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}

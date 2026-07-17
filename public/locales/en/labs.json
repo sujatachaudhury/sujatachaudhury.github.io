@@ -1,0 +1,44 @@
+{
+  "chat.dot.primary": "Ask about my work",
+  "chat.dot.meta": "Local AI · beta",
+  "chat.dot.aria": "Open the local AI assistant",
+
+  "chat.panel.title": "Ask about my work",
+  "chat.panel.meta": "Local AI · beta",
+
+  "chat.disclosure.intro": "This runs a small AI model inside your browser to answer questions about my background and projects. Nothing is sent to a server.",
+  "chat.disclosure.line.download": "First use downloads ~500MB of model weights, cached in your browser afterwards.",
+  "chat.disclosure.line.webgpu": "Requires WebGPU (recent Chrome, Edge, or Firefox on desktop).",
+  "chat.disclosure.line.accuracy": "Answers are drawn from a curated bio and may still be wrong. Prefer the résumé for facts.",
+  "chat.disclosure.line.voice": "Optional voice mode adds ~800MB (WebGPU) or ~550MB (WebAssembly) and asks for microphone access.",
+  "chat.disclosure.start": "Start",
+  "chat.disclosure.dismiss": "Not now",
+
+  "chat.webgpuMissing": "WebGPU isn't available in this browser. Try Chrome, Edge, or Firefox on desktop.",
+
+  "chat.seed": "I can answer questions about Sujata's background, projects, and experience. Everything runs locally in your browser.",
+  "chat.refusal": "I only answer questions about Sujata's background, work, and projects. Try asking about her experience at Optum, her research, or her Master's at Tampere.",
+
+  "chat.label.user": "You",
+  "chat.label.assistant": "Local AI",
+  "chat.input.placeholder": "Ask about my work…",
+
+  "chat.action.send": "Send",
+  "chat.action.expand": "Expand",
+  "chat.action.collapse": "Collapse",
+  "chat.action.close": "Close",
+  "chat.action.overflow": "Expand for full response",
+
+  "chat.voice.on": "Turn voice off",
+  "chat.voice.off": "Turn voice on",
+
+  "chat.voice.state.idle": "Ready",
+  "chat.voice.state.listening": "Listening…",
+  "chat.voice.state.thinking": "Thinking",
+  "chat.voice.state.speaking": "Speaking",
+  "chat.voice.state.error": "Something went wrong",
+  "chat.voice.orbLabel": "Voice assistant menu",
+  "chat.voice.backToChat": "Back to chat",
+
+  "chat.progress.ready": "Preparing the model…"
+}

@@ -4,16 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack && node scripts/generate-sitemap.mjs",
+    "build": "node scripts/copy-labs-assets.mjs && next build --turbopack && node scripts/generate-sitemap.mjs && node scripts/build-bio-index.mjs",
+    "build:bio-index": "node scripts/build-bio-index.mjs",
+    "labs:sync-assets": "node scripts/copy-labs-assets.mjs",
     "start": "next start",
     "lint": "eslint",
     "translate": "node scripts/translate-locales.mjs",
     "check-locales": "node scripts/check-locales.mjs",
+    "postinstall": "node scripts/copy-labs-assets.mjs",
     "prepare": "husky"
   },
   "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.84",
+    "@ricky0123/vad-web": "^0.0.30",
     "intl-messageformat": "^10.7.18",
+    "kokoro-js": "^1.2.1",
     "next": "15.5.4",
+    "onnxruntime-web": "^1.27.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

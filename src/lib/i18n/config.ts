@@ -35,7 +35,7 @@ export const localeMeta: Record<Locale, LocaleMetadata> = {
   de: { code: "de", label: "German",   native: "Deutsch",   direction: "ltr", bcp47: "de" },
 };
 
-export const namespaces = ["common", "landing", "work", "projects"] as const;
+export const namespaces = ["common", "landing", "work", "projects", "labs"] as const;
 export type Namespace = (typeof namespaces)[number];
 
 export function isLocale(value: string): value is Locale {

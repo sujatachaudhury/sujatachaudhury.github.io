@@ -19,6 +19,7 @@ import {
   type LangOption,
 } from "@/components/layout";
 import { profile } from "@/content/profile";
+import { LabsChat } from "@/components/labs/LabsChat";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -33,9 +34,47 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const { locale } = await params;
   if (!isLocale(locale) || !activeLocales.includes(locale)) notFound();
 
-  const messages = await loadMessages(locale, ["common"]);
+  const messages = await loadMessages(locale, ["common", "labs"]);
   const t = createTranslator(locale, messages);
   const navItems = buildNavItems(locale, t);
+
+  const labsStrings = {
+    dotPrimary: t("chat.dot.primary"),
+    dotMeta: t("chat.dot.meta"),
+    dotAria: t("chat.dot.aria"),
+    panelTitle: t("chat.panel.title"),
+    panelMeta: t("chat.panel.meta"),
+    disclosureIntro: t("chat.disclosure.intro"),
+    disclosureLines: [
+      t("chat.disclosure.line.download"),
+      t("chat.disclosure.line.webgpu"),
+      t("chat.disclosure.line.accuracy"),
+      t("chat.disclosure.line.voice"),
+    ],
+    disclosureStart: t("chat.disclosure.start"),
+    disclosureDismiss: t("chat.disclosure.dismiss"),
+    seed: t("chat.seed"),
+    refusal: t("chat.refusal"),
+    labelUser: t("chat.label.user"),
+    labelAssistant: t("chat.label.assistant"),
+    inputPlaceholder: t("chat.input.placeholder"),
+    sendLabel: t("chat.action.send"),
+    expandLabel: t("chat.action.expand"),
+    collapseLabel: t("chat.action.collapse"),
+    closeLabel: t("chat.action.close"),
+    overflowHint: t("chat.action.overflow"),
+    voiceLabelOn: t("chat.voice.on"),
+    voiceLabelOff: t("chat.voice.off"),
+    voiceIdle: t("chat.voice.state.idle"),
+    voiceListening: t("chat.voice.state.listening"),
+    voiceThinking: t("chat.voice.state.thinking"),
+    voiceSpeaking: t("chat.voice.state.speaking"),
+    voiceError: t("chat.voice.state.error"),
+    voiceOrbLabel: t("chat.voice.orbLabel"),
+    voiceBackToChat: t("chat.voice.backToChat"),
+    progressReady: t("chat.progress.ready"),
+    webgpuMissing: t("chat.webgpuMissing"),
+  };
 
   const langOptions: LangOption[] = activeLocales.map((code) => ({
     code,
@@ -79,6 +118,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       >
         <Container>{children}</Container>
       </PageShell>
+      <LabsChat strings={labsStrings} />
       <LocaleHtmlLang locale={locale} />
     </>
   );

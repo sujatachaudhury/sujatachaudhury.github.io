@@ -1,0 +1,209 @@
+.root {
+  position: fixed;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  z-index: var(--z-overlay);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: var(--space-2);
+}
+
+/*
+ * The pill container holds two 88px circles side by side. When the menu is
+ * closed, only the right circle (the orb) is visible. When open, the pill
+ * expands leftward so a second circle appears, joined to the orb by a
+ * continuous rounded rectangle.
+ *
+ * We keep the orb permanently at the right edge (fixed position anchored to
+ * the parent's `right: 0`) and animate the pill's own width. That way the
+ * orb never moves — only the pill grows out from underneath it.
+ */
+.pill {
+  position: relative;
+  block-size: 44px;
+  inline-size: 44px;
+  transition: inline-size 200ms var(--ease-standard);
+}
+
+.pillOpen {
+  inline-size: 96px; /* 44 orb + 8 gap + 44 button */
+}
+
+/*
+ * The pill background is a single rounded rectangle that sits behind both
+ * circles. When closed its right end is right-aligned with the orb; open,
+ * it stretches leftward to enclose the button-circle. Filled with the same
+ * surface colour as the orb's base gradient so the whole shape reads as one
+ * continuous element.
+ */
+.pillBg {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  inline-size: 100%;
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
+  border: var(--border-hairline) solid var(--color-rule-strong);
+  /* Only visible when the pill is expanded — otherwise it hides behind the
+   * orb's own border. */
+  opacity: 0;
+  transition: opacity 160ms var(--ease-standard);
+  pointer-events: none;
+}
+
+.pillOpen .pillBg {
+  opacity: 1;
+}
+
+/*
+ * The orb sits at the right end of the pill. It's a <button> that toggles
+ * the menu. Visual identity (breathing, listening pulse, etc.) unchanged
+ * from before; we just put it inside the pill container.
+ */
+.orbButton {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.orbButton:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.orb {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--color-bg-elevated), var(--color-bg-muted));
+  border: var(--border-hairline) solid var(--color-rule-strong);
+  transform-origin: center;
+  transition: transform var(--motion-fast), box-shadow var(--motion-base), background var(--motion-base);
+}
+
+.idle .orb {
+  animation: breathe 2.4s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(15, 15, 14, 0);
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(15, 15, 14, 0.05); }
+  50%      { transform: scale(1.03); box-shadow: 0 0 0 4px rgba(15, 15, 14, 0.03); }
+}
+
+.listening .orb {
+  background: radial-gradient(circle at 30% 30%, var(--color-bg-elevated), var(--ink-800));
+  box-shadow: 0 0 0 3px rgba(15, 15, 14, 0.08);
+}
+
+.speaking .orb {
+  background: radial-gradient(circle at 30% 30%, var(--signal-500), var(--signal-700));
+  box-shadow: 0 0 0 4px rgba(184, 74, 42, 0.14);
+}
+
+.thinking .arc {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-block-start-color: var(--color-text-signal);
+  animation: spin 900ms linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error .orb {
+  background: var(--color-bg-muted);
+  animation: none;
+}
+
+/*
+ * The action button-circle. Positioned at the *left* end of the pill.
+ * When the pill is closed, it's translated behind the orb (translateX 96px)
+ * and hidden from AT via aria-hidden + visibility. On open, it slides into
+ * place. No voice-state animations — this is chrome, not signal.
+ */
+.actionButton {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  inline-size: 44px;
+  block-size: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transform: translateX(52px); /* Hidden behind orb (44 + 8 gap) */
+  opacity: 0;
+  transition:
+    transform 200ms var(--ease-standard),
+    opacity 160ms var(--ease-standard),
+    color var(--motion-fast);
+}
+
+.pillOpen .actionButton {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.actionButton:hover {
+  color: var(--color-text);
+}
+
+.actionButton:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-focus-ring);
+  outline-offset: -3px;
+}
+
+.actionIcon {
+  inline-size: 18px;
+  block-size: 18px;
+}
+
+.caption {
+  font-family: var(--font-mono), monospace;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  min-block-size: 1.4em;
+  text-align: end;
+  padding-inline-end: 4px; /* Roughly align under the centre of the (44px) orb */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idle .orb,
+  .listening .orb,
+  .speaking .orb {
+    animation: none;
+    transform: none !important;
+  }
+  .thinking .arc {
+    animation: none;
+    border-block-start-color: transparent;
+    border-inline-end-color: var(--color-text-signal);
+  }
+  .pill,
+  .pillBg,
+  .actionButton {
+    transition: none;
+  }
+}
