@@ -1,0 +1,34 @@
+.root {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-thickness var(--motion-fast), color var(--motion-fast);
+}
+
+.root:hover {
+  color: var(--color-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+.root:visited {
+  color: var(--color-link-visited);
+}
+
+.external::after {
+  content: "↗";
+  display: inline-block;
+  margin-inline-start: 0.2em;
+  font-size: 0.85em;
+  transform: translateY(-0.05em);
+}
+
+.plain {
+  color: inherit;
+  text-decoration: none;
+}
+
+.plain:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}

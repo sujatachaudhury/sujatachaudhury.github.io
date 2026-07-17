@@ -1,0 +1,38 @@
+/*
+ * globals.css — sole entry point loaded by app/layout.tsx.
+ * Order matters: tokens must resolve before reset/typography use them.
+ */
+@import "./tokens/base.css";
+@import "./tokens/semantic.css";
+@import "./tokens/motion.css";
+@import "./reset.css";
+@import "./typography.css";
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  border: 0;
+  border-top: var(--border-hairline) solid var(--color-rule);
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

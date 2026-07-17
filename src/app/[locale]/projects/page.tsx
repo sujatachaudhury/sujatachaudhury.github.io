@@ -1,94 +1,88 @@
-import { getTranslationsFromProps, LocalizationProps, locales } from '@/i18n';
-import stylesheet from "@/tokens/stylesheet.module.css";
-import styles from "./page.module.css";
-import { ProjectCards } from '@/components';
+import type { Metadata } from "next";
+import Image from "next/image";
+import {
+  activeLocales,
+  createTranslator,
+  isLocale,
+  loadMessages,
+  localeMeta,
+  type Locale,
+} from "@/lib/i18n";
+import { Tag } from "@/components/primitives";
+import { projects } from "@/content/projects";
+import styles from "./projects.module.css";
 
-type GitHubRepo = {
-  id: number;
-  name: string;
-  html_url: string;
-  description: string | null;
-  language: string | null;
-  stargazers_count: number;
-  forks_count: number;
-  updated_at: string;
-  fork: boolean;
-};
-
-async function getPublicRepos() {
-  try {
-    const response = await fetch(
-      "https://api.github.com/users/sujatachaudhury/repos?sort=updated&direction=desc&per_page=12",
-      {
-        headers: {
-          Accept: "application/vnd.github+json",
-        },
-      },
-    );
-
-    if (!response.ok) {
-      return [];
-    }
-
-    const repos = (await response.json()) as GitHubRepo[];
-
-    return repos.filter((repo) => !repo.fork);
-  } catch {
-    return [];
-  }
+export function generateStaticParams() {
+  return activeLocales.map((locale) => ({ locale }));
 }
 
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    locale,
-  }));
+interface Props {
+  params: Promise<{ locale: string }>;
 }
 
-export default async function Projects(props: LocalizationProps) {
-  const translation = await getTranslationsFromProps(props);
-  const repos = await getPublicRepos();
-  
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  const messages = await loadMessages(locale, ["projects"]);
+  const t = createTranslator(locale, messages);
+  return {
+    title: t("page.title"),
+    description: t("page.summary"),
+    alternates: {
+      canonical: `/${locale}/projects/`,
+      languages: Object.fromEntries(
+        activeLocales.map((code) => [localeMeta[code].bcp47, `/${code}/projects/`]),
+      ),
+    },
+  };
+}
+
+export default async function ProjectsPage({ params }: Props) {
+  const { locale } = await params;
+  if (!isLocale(locale)) return null;
+  const messages = await loadMessages(locale as Locale, ["projects"]);
+  const t = createTranslator(locale as Locale, messages);
+
   return (
-    <div className={styles.container}>
-      <header className={`${stylesheet.h1} ${stylesheet.textAccent}`}>{translation.projects.title}</header>
-      {/* <p className={`${stylesheet.body} ${stylesheet.textAccent} ${styles.description}`}>
-        {translation.projects.description}
-      </p> */}
+    <>
+      <header className={styles.header}>
+        <h1 className={styles.title}>{t("page.title")}</h1>
+        <p className={styles.summary}>{t("page.summary")}</p>
+      </header>
 
-      {/* <section className={styles.grid} aria-label={translation.projects.repositoryList}>
-        {repos.length > 0 ? repos.map((repo) => (
-          <article className={styles.project} key={repo.id}>
-            <a className={styles.projectName} href={repo.html_url} target="_blank" rel="noreferrer">
-              {repo.name}
-            </a>
-            <p className={styles.projectDescription}>
-              {repo.description || translation.projects.noDescription}
-            </p>
-            <dl className={styles.meta}>
-              {repo.language ? (
-                <div className={styles.metaItem}>
-                  <dt>{translation.projects.language}</dt>
-                  <dd>{repo.language}</dd>
-                </div>
-              ) : null}
-              <div className={styles.metaItem}>
-                <dt>{translation.projects.stars}</dt>
-                <dd>{repo.stargazers_count}</dd>
+      <ol className={styles.list}>
+        {projects.map((project) => (
+          <li key={project.id} className={styles.item}>
+            <div className={styles.imageWrap}>
+              {project.image ? (
+                <Image
+                  src={project.image.src}
+                  alt={project.image.alt}
+                  width={640}
+                  height={480}
+                  sizes="(max-width: 720px) 100vw, 40vw"
+                />
+              ) : (
+                <div className={styles.imagePlaceholder}>Figure</div>
+              )}
+            </div>
+            <div className={styles.body}>
+              <div className={styles.meta}>
+                <Tag>{project.year}</Tag>
+                <Tag>{t(`status.${project.status}`)}</Tag>
               </div>
-              <div className={styles.metaItem}>
-                <dt>{translation.projects.forks}</dt>
-                <dd>{repo.forks_count}</dd>
+              <h2 className={styles.projectTitle}>{t(`${project.key}.title`)}</h2>
+              <p className={styles.projectSummary}>{t(`${project.key}.summary`)}</p>
+              <p className={styles.projectBody}>{t(`${project.key}.body`)}</p>
+              <div className={styles.stack}>
+                {project.stack.map((tech) => (
+                  <Tag key={tech}>{tech}</Tag>
+                ))}
               </div>
-            </dl>
-          </article>
-        )) : (
-          <p className={styles.empty}>{translation.projects.empty}</p>
-        )}
-      </section> */}
-
-      <ProjectCards projects={translation['project-cards']} />
-
-
-    </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </>
   );
 }

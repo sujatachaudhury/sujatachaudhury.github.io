@@ -1,0 +1,23 @@
+.root {
+  inline-size: 32px;
+  block-size: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: var(--border-hairline) solid var(--color-border);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  transition: color var(--motion-fast), border-color var(--motion-fast);
+}
+
+.root:hover {
+  color: var(--color-text);
+  border-color: var(--color-rule-strong);
+}
+
+.icon {
+  inline-size: 16px;
+  block-size: 16px;
+}

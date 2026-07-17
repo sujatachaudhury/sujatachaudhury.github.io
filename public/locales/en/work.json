@@ -1,0 +1,55 @@
+{
+  "page.title": "Work & education",
+  "page.summary": "A reverse-chronological trace of what I've done, why, and what I took away. Industry work, degrees, and one peer-reviewed publication — the resume, longer.",
+
+  "sections.experience": "Experience",
+  "sections.education": "Education",
+  "sections.publications": "Publications",
+
+  "meta.role": "Role",
+  "meta.location": "Location",
+  "meta.dates": "Dates",
+  "meta.institution": "Institution",
+  "meta.program": "Program",
+  "meta.publisher": "Publisher",
+  "meta.journal": "Journal",
+  "meta.doi": "DOI",
+  "meta.authors": "Authors",
+  "meta.date": "Date",
+
+  "present": "Present",
+
+  "roles.optum.title": "Software Engineer",
+  "roles.optum.org": "Optum",
+  "roles.optum.location": "Bengaluru, India",
+  "roles.optum.summary": "Built and maintained an enterprise C# / .NET healthcare data platform managing provider records for thousands of US medical professionals.",
+  "roles.optum.bullets.0": "Led design proposals to modernize a legacy provider-data system, improving maintainability and cutting technical debt on a business-critical service.",
+  "roles.optum.bullets.1": "Collaborated cross-functionally with product managers and engineers in agile teams to deliver features aligned with business requirements.",
+  "roles.optum.bullets.2": "Proposed and presented an AI/ML-driven AutoML approach for automating model creation and hyperparameter tuning at the Optum Global Hackathon.",
+
+  "roles.internSummer.title": "Summer Intern",
+  "roles.internSummer.org": "Summer Internship, India",
+  "roles.internSummer.location": "India (remote)",
+  "roles.internSummer.summary": "Full-stack development in .NET and Java Spring Boot inside a collaborative agile team.",
+
+  "roles.internIIT.title": "Engineering Intern",
+  "roles.internIIT.org": "IIT Kharagpur",
+  "roles.internIIT.location": "Kharagpur, India",
+  "roles.internIIT.summary": "Built a WebRTC application for video conferencing and content sharing on bandwidth-constrained networks, with STUN/TURN peer connectivity at near-zero cost. Frontend components in Vue.js.",
+
+  "degrees.msc.title": "MSc, Erasmus Mundus Joint Masters in Imaging",
+  "degrees.msc.institution": "Politecnico di Milano · Tampere University",
+  "degrees.msc.location": "Milan, Italy · Tampere, Finland",
+  "degrees.msc.summary": "Specializing in Image Modelling and Data-Intensive Imaging.",
+
+  "degrees.btech.title": "B.Tech, Computer Science & Engineering",
+  "degrees.btech.institution": "National Institute of Technology, Agartala",
+  "degrees.btech.location": "Tripura, India",
+
+  "publications.rnn.title": "Improving performance of Recurrent Neural Networks for Question-Answering with Attention-based Context Reduction",
+  "publications.rnn.authors": "Sagnik Modak, Sujata Chaudhury, Abhishek Rawat, Suman Deb",
+  "publications.rnn.venue": "IEEE MysuruCon 2021",
+  "publications.rnn.publisher": "IEEE",
+  "publications.rnn.date": "October 2021",
+  "publications.rnn.doi": "10.1109/MysuruCon52639.2021.9641626"
+}

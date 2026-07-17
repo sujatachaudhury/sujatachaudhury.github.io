@@ -1,0 +1,35 @@
+{
+  "hero.eyebrow": "Portfolio — 2026",
+  "hero.title": "Between the Image and the Answer.",
+  "hero.summary": "I'm a Computer Vision and Machine Learning engineer with {years, plural, one {# year} other {# years}} of industry experience building software for healthcare. I'm currently finishing an Erasmus Mundus Joint Master's in Imaging across Politecnico di Milano and Tampere University, focused on image modelling and data-intensive imaging.",
+  "hero.cta.primary": "Get in touch",
+  "hero.cta.secondary": "Read my work",
+
+  "signals.title": "At a glance",
+  "signals.education.eyebrow": "Now studying",
+  "signals.education.title": "MSc Imaging",
+  "signals.education.body": "Erasmus Mundus, Politecnico di Milano & Tampere University.",
+  "signals.industry.eyebrow": "Industry",
+  "signals.industry.title": "3 years at Optum",
+  "signals.industry.body": "C# / .NET healthcare data platforms serving US medical professionals.",
+  "signals.research.eyebrow": "Published",
+  "signals.research.title": "IEEE MysuruCon 2021",
+  "signals.research.body": "Attention-based context reduction for RNN question-answering.",
+
+  "focus.title": "What I work on",
+  "focus.intro": "The intersection of pixels, geometry, and learned models. Ordered from most-hands-on to most-curious.",
+  "focus.items.cv.title": "Computer vision",
+  "focus.items.cv.body": "Image segmentation, feature extraction, 3D reconstruction, epipolar geometry, OpenCV pipelines.",
+  "focus.items.ml.title": "Machine learning",
+  "focus.items.ml.body": "Neural networks in PyTorch and TensorFlow, from tabular models to pixel-level classifiers.",
+  "focus.items.systems.title": "Software systems",
+  "focus.items.systems.body": "Backends in C# / .NET and Java. Comfortable across the stack; happier close to the model.",
+
+  "contact.eyebrow": "Contact",
+  "contact.title": "Let's talk.",
+  "contact.body": "Looking for a Computer Vision or ML Engineering role. Available for interviews anywhere in the EU, remote elsewhere.",
+  "contact.email.label": "Email",
+  "contact.email.value": "sujata.chaudhury@gmail.com",
+  "contact.location.label": "Based in",
+  "contact.location.value": "Tampere, Finland"
+}

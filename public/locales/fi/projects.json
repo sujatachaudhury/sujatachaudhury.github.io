@@ -1,0 +1,23 @@
+{
+  "page.title": "[mt] Hankkeet",
+  "page.summary": "[mt] Valinnut työ tietokoneen näkemisen, geometrian ja koneen oppimisen risteyksessä.",
+  "meta.stack": "[mt] Puu",
+  "meta.role": "[mt] Minun roolini",
+  "meta.status": "[mt] Tilanne",
+  "meta.year": "[mt] Vuosi",
+  "meta.source": "[mt] Lähteä",
+  "meta.link": "[mt] Link",
+  "status.published": "[mt] Julkista",
+  "status.thesis": "[mt] Työskirja",
+  "status.coursework": "[mt] Kurssin työ",
+  "status.industry": "[mt] Teollisuus",
+  "items.vehicles.title": "[mt] Liikkuvien ajoneuvojen visuaalinen analyysi",
+  "items.vehicles.summary": "[mt] Geometriset kehykset ajoneuvon liikkeen analysointiin ja törmäyskatseisiin, jotka perustuvat 3D-rekonstruktioon ja projektiiviseen geometrieen.",
+  "items.vehicles.body": "[mt] Käytössä olevat törmäyskatseputkijat tukevat liikkeen ominaisuuksia tai syviä verkkoja. Tämä projekti ottaa toisen tien: kun otetaan huomioon tunnettu kameran sisäinen ominaisuus ja ajoneuvon vakio-mitat, valot tulevat luotettaviksi viittauspisteiksi. Näistä projektiivinen geometria tuottaa katoamispisteitä, ajoneuvon suuntautumista ja  takaprojektion ja cosinesin lain kautta  todellisen maailman ajoneuvojen välinen etäisyys.",
+  "items.survival.title": "[mt] Sydänkalsifiointi ja selviytyminen keuhkosyöpään liittyvässä säteilyhoidossa",
+  "items.survival.summary": "[mt] CT-tunnisteista on otettu kalkeat alueet kuvan segmentation avulla ja niiden vaikutus potilaan elinkaariin arvioitu Coxin suhteellisella vaarojen analyysin avulla.",
+  "items.survival.body": "[mt] Automaattinen Agatston-tyypin sydänkalsifioinnin pisteytys CT DICOM-kuvista Pythonissa, yhdistettynä selviytymisen analyysiin R:ssä. Putki muuttaa kuvia käyttävien biomarkerit tilastollisesti testaaviksi ennusteiksi säteilyhoitoon osallistuvien keuhkosyöpäpotilaiden yleisestä selviytymisestä.",
+  "items.mars.title": "[mt] Marsilla sijaitsevan maan segmentointi",
+  "items.mars.summary": "[mt] Syvä oppimiskodelista pixelitasolla luokiteltavaa Marsin maaperän, joka on sovittu korkean keskiarvon ristiriidassa.",
+  "items.mars.body": "[mt] Koulutettiin ja arvioitiin marsin kiertoradan kuvausten segmenttiarkitektuuri, jossa saavutettiin korkeat MIoU:t maantieteellisten luokkien välillä."
+}

@@ -1,0 +1,17 @@
+/*
+ * Motion tokens — durations and easings. Respect prefers-reduced-motion.
+ * Motion is limited to state transitions; never scroll-driven, never decorative.
+ */
+:root {
+  --motion-fast: var(--duration-fast) var(--ease-standard);
+  --motion-base: var(--duration-base) var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "page.title": "Projects",
+  "page.summary": "Selected work at the intersection of computer vision, geometry, and machine learning. Each project links a concrete problem to the tools I reached for.",
+
+  "meta.stack": "Stack",
+  "meta.role": "My role",
+  "meta.status": "Status",
+  "meta.year": "Year",
+  "meta.source": "Source",
+  "meta.link": "Link",
+
+  "status.published": "Published",
+  "status.thesis": "Thesis",
+  "status.coursework": "Coursework",
+  "status.industry": "Industry",
+
+  "items.vehicles.title": "Visual analysis of moving vehicles",
+  "items.vehicles.summary": "A geometric framework for vehicle motion analysis and collision detection, built on 3D reconstruction and projective geometry.",
+  "items.vehicles.body": "Existing collision-detection pipelines lean on motion features or deep networks. This project takes a different route: given known camera intrinsics and standard vehicle dimensions, headlights become reliable reference points. From those, projective geometry yields vanishing points, vehicle orientation, and — through back-projection and the law of cosines — real-world inter-vehicle distance.",
+
+  "items.survival.title": "Cardiac calcification and survival in lung-cancer radiotherapy",
+  "items.survival.summary": "Extracted calcified regions from CT scans via image segmentation, then evaluated their effect on patient survival with Cox proportional-hazards analysis.",
+  "items.survival.body": "Automated Agatston-style cardiac calcification scoring from CT DICOM images in Python, paired with survival analysis in R. The pipeline turns imaging biomarkers into statistically testable predictors of overall survival for lung-cancer patients undergoing radiotherapy.",
+
+  "items.mars.title": "Segmentation of Mars terrain",
+  "items.mars.summary": "A deep-learning model for pixel-level classification of Mars terrain, tuned for high mean intersection-over-union.",
+  "items.mars.body": "Trained and evaluated a segmentation architecture on Mars orbital imagery, achieving high MIoU across terrain classes. Emphasis on class balance, augmentation strategy, and boundary-aware loss."
+}

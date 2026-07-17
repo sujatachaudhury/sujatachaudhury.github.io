@@ -1,0 +1,19 @@
+{
+  "site.name": "[mt] Sujata Chaudhury",
+  "site.role": "[mt] ML & Computer Vision Ingenieur",
+  "site.tagline": "[mt] Maschinelles Lernen, Computersicht und alles dazwischen.",
+  "nav.home": "[mt] Zuhause",
+  "nav.work": "[mt] Arbeit",
+  "nav.projects": "[mt] Projekte",
+  "nav.contact": "[mt] Kontakt",
+  "a11y.skip": "[mt] Überspringen Sie auf Inhalt",
+  "a11y.langSwitcher": "[mt] Sprache ändern",
+  "a11y.themeLight": "[mt] Schalten Sie den Lichtmodus ein",
+  "a11y.themeDark": "[mt] Schalten Sie in den dunklen Modus",
+  "footer.tagline": "[mt] Handgebaut in Tampere.",
+  "footer.colophon": "[mt] Setzt in Fraunces und IBM Plex. © {year} Sujata Chaudhury.",
+  "footer.links.email": "[mt] E-Mail",
+  "footer.links.linkedin": "[mt] Linkedin",
+  "footer.links.github": "[mt] GitHub",
+  "footer.links.resume": "[mt] Zusammenfassung"
+}

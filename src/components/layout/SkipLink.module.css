@@ -1,0 +1,18 @@
+.root {
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: var(--z-modal);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  font-family: var(--font-body), sans-serif;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-control);
+  transform: translateY(-200%);
+  transition: transform var(--motion-fast);
+}
+
+.root:focus-visible {
+  transform: translateY(0);
+}

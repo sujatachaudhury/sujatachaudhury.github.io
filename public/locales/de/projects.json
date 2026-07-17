@@ -1,0 +1,23 @@
+{
+  "page.title": "[mt] Projekte",
+  "page.summary": "[mt] Ich habe mich auf die Schnittstelle von Computervision, Geometrie und Maschinelles Lernen gewählt.",
+  "meta.stack": "[mt] Stack",
+  "meta.role": "[mt] Meine Rolle",
+  "meta.status": "[mt] Status",
+  "meta.year": "[mt] Jahr",
+  "meta.source": "[mt] Quelle",
+  "meta.link": "[mt] Link",
+  "status.published": "[mt] Veröffentlicht",
+  "status.thesis": "[mt] Abschlussarbeiten",
+  "status.coursework": "[mt] Kursarbeit",
+  "status.industry": "[mt] Industrie",
+  "items.vehicles.title": "[mt] Visuelle Analyse von Fahrzeugen in Bewegung",
+  "items.vehicles.summary": "[mt] Ein geometrisches Rahmenwerk für die Bewegungsanalyse und Kollisionsdetektion von Fahrzeugen, basierend auf 3D-Rekonstruktion und Projektivgeometrie.",
+  "items.vehicles.body": "[mt] Die bestehenden Kollisionsdetektionsleitungen beruhen auf Bewegungseigenschaften oder tiefen Netzwerken. Dieses Projekt nimmt einen anderen Weg: Angesichts der bekannten Kamera-Einheit und der Standarddimensionen des Fahrzeugs werden Scheinwerfer zuverlässige Referenzpunkte.",
+  "items.survival.title": "[mt] Herzkalzifizierung und Überleben bei der Lungenkrebs-Radiotherapie",
+  "items.survival.summary": "[mt] Aus dem CT-Scan wurden kalzierte Regionen durch Bildsegmentierung extrahiert und ihre Wirkung auf das Überleben des Patienten mit Cox-Verhältnisgefahren-Analyse bewertet.",
+  "items.survival.body": "[mt] Die automatische Akzentbildung von Herzkalzifizierung im Agatston-Stil aus CT-DICOM-Bildern in Python, in Verbindung mit Überlebensanalyse in R. Die Pipeline verwandelt die Bildgebung in statistisch überprüfbare Prädiktoren des Gesamtüberlebens von Lungenkrebspatienten, die sich einer Strahlentherapie unterziehen.",
+  "items.mars.title": "[mt] Segmentierung des Mars-Terrain",
+  "items.mars.summary": "[mt] Ein tieflerne Lernmodell für die Pixel-Ebene-Klassifizierung des Mars-Terrain, abgestimmt auf hohe Mittel-Schnitt-über-Union.",
+  "items.mars.body": "[mt] Er trainierte und bewertete eine Segmentierungsarchitektur auf Mars-Orbitalbildern, die eine hohe MIoU in allen Gelände-Klassen erzielte."
+}

@@ -4,23 +4,29 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build --turbopack && node scripts/generate-sitemap.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "translate": "node scripts/translate-locales.mjs",
+    "check-locales": "node scripts/check-locales.mjs",
+    "prepare": "husky"
   },
   "dependencies": {
+    "intl-messageformat": "^10.7.18",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@huggingface/transformers": "^4.2.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
+    "husky": "^9.1.7",
     "postcss-import": "^16.1.1",
     "tailwindcss": "^4",
     "typescript": "^5"

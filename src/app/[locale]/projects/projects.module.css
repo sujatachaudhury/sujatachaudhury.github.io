@@ -1,0 +1,121 @@
+.header {
+  padding-block: var(--space-16) var(--space-8);
+  border-bottom: var(--border-hairline) solid var(--color-rule);
+  margin-block-end: var(--space-12);
+}
+
+.title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(var(--font-size-4xl), 7vw, var(--font-size-5xl));
+  letter-spacing: -0.02em;
+  line-height: var(--lh-display);
+  margin-block-end: var(--space-4);
+}
+
+.summary {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  max-inline-size: 60ch;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 1.4fr;
+  gap: var(--space-10);
+  padding-block: var(--space-12);
+  border-block-start: var(--border-hairline) solid var(--color-rule);
+}
+
+.item:first-child {
+  border-block-start: 2px solid var(--color-rule-strong);
+}
+
+.item:nth-child(even) {
+  grid-template-columns: 1.4fr minmax(280px, 1fr);
+}
+
+.item:nth-child(even) .imageWrap {
+  order: 2;
+}
+
+.imageWrap {
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-muted);
+  border: var(--border-hairline) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  position: relative;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.15) contrast(1.02);
+}
+
+.imagePlaceholder {
+  display: grid;
+  place-items: center;
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono), monospace;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  block-size: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.projectTitle {
+  font-family: var(--font-display), serif;
+  font-size: clamp(var(--font-size-2xl), 3vw, var(--font-size-3xl));
+  line-height: var(--lh-heading);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.projectSummary {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.projectBody {
+  color: var(--color-text);
+}
+
+.stack {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-block-start: var(--space-2);
+}
+
+@media (max-width: 720px) {
+  .item,
+  .item:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .item:nth-child(even) .imageWrap {
+    order: 0;
+  }
+}

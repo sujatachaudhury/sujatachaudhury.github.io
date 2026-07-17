@@ -1,0 +1,101 @@
+/*
+ * Base tokens — raw primitive values only.
+ * Never reference these directly from components; use semantic.css instead.
+ */
+:root {
+  /* Neutrals — warm-tinted greyscale */
+  --ink-50:  #F5F1EA;
+  --ink-100: #ECE6DB;
+  --ink-200: #D8CFBE;
+  --ink-300: #B8AC98;
+  --ink-400: #8A8072;
+  --ink-500: #5C554B;
+  --ink-600: #3D3831;
+  --ink-700: #262421;
+  --ink-800: #181715;
+  --ink-900: #0F0F0E;
+
+  --paper: #FBF7F0;
+  --white: #FFFFFF;
+
+  /* Signal — single accent, terracotta */
+  --signal-500: #B84A2A;
+  --signal-600: #973C22;
+  --signal-700: #75301C;
+
+  /* State */
+  --danger-500: #B0271A;
+  --success-500: #2F7A4F;
+
+  /* Spacing — 4px scale */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-40: 160px;
+
+  /* Type scale — 1.200 modular, base 16 */
+  --font-size-xs:   12px;
+  --font-size-sm:   14px;
+  --font-size-base: 16px;
+  --font-size-md:   18px;
+  --font-size-lg:   21px;
+  --font-size-xl:   25px;
+  --font-size-2xl:  30px;
+  --font-size-3xl:  36px;
+  --font-size-4xl:  44px;
+  --font-size-5xl:  53px;
+  --font-size-6xl:  64px;
+
+  /* Line heights */
+  --lh-display: 1.05;
+  --lh-heading: 1.15;
+  --lh-tight:   1.3;
+  --lh-body:    1.55;
+  --lh-relaxed: 1.75;
+
+  /* Weights (both serif and sans expose 300–700) */
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* Radii — structural, not decorative */
+  --radius-0:  0;
+  --radius-1:  2px;
+  --radius-2:  4px;
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-hairline: 1px;
+  --border-heavy:    2px;
+
+  /* Elevation — used sparingly */
+  --elevation-1: 0 1px 0 rgba(15, 15, 14, 0.12);
+  --elevation-2: 0 2px 0 rgba(15, 15, 14, 0.16);
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --ease-standard: cubic-bezier(.2, .6, .2, 1);
+
+  /* Layout */
+  --measure-prose: 68ch;
+  --measure-page:  1200px;
+  --measure-narrow: 800px;
+
+  /* Z-index */
+  --z-nav:     10;
+  --z-overlay: 100;
+  --z-modal:   1000;
+}

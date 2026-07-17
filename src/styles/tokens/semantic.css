@@ -1,0 +1,136 @@
+/*
+ * Semantic tokens — everything components reference goes here.
+ * Names describe *purpose*, never appearance. Swap raw values in base.css to reskin.
+ */
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --color-bg:              var(--paper);
+  --color-bg-elevated:     var(--white);
+  --color-bg-inverse:      var(--ink-900);
+  --color-bg-muted:        var(--ink-100);
+
+  /* Text */
+  --color-text:            var(--ink-900);
+  --color-text-muted:      var(--ink-500);
+  --color-text-subtle:     var(--ink-400);
+  --color-text-inverse:    var(--paper);
+  --color-text-signal:     var(--signal-600);
+
+  /* Rules and borders */
+  --color-rule:            var(--ink-200);
+  --color-rule-strong:     var(--ink-800);
+  --color-border:          var(--ink-300);
+
+  /* Interactive */
+  --color-link:            var(--signal-600);
+  --color-link-hover:      var(--signal-700);
+  --color-link-visited:    var(--signal-700);
+
+  --color-focus-ring:      var(--signal-500);
+  --focus-ring-width:      2px;
+  --focus-ring-offset:     2px;
+
+  /* Primary control */
+  --control-bg:            var(--ink-900);
+  --control-bg-hover:      var(--ink-800);
+  --control-bg-active:     var(--ink-700);
+  --control-fg:            var(--paper);
+  --control-border:        var(--ink-900);
+  --control-disabled-bg:   var(--ink-200);
+  --control-disabled-fg:   var(--ink-400);
+
+  /* Ghost control */
+  --control-ghost-bg:        transparent;
+  --control-ghost-bg-hover:  var(--ink-100);
+  --control-ghost-fg:        var(--ink-900);
+  --control-ghost-border:    var(--ink-900);
+
+  /* State */
+  --color-error:           var(--danger-500);
+  --color-success:         var(--success-500);
+
+  /* Component-scoped spacing */
+  --pad-button-y:  var(--space-3);
+  --pad-button-x:  var(--space-5);
+  --pad-card:      var(--space-6);
+  --pad-section-y: var(--space-24);
+  --pad-section-x: var(--space-6);
+
+  /* Radii by role */
+  --radius-control: var(--radius-1);
+  --radius-card:    var(--radius-2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --color-bg:              var(--ink-900);
+    --color-bg-elevated:     var(--ink-800);
+    --color-bg-inverse:      var(--paper);
+    --color-bg-muted:        var(--ink-700);
+
+    --color-text:            var(--paper);
+    --color-text-muted:      var(--ink-300);
+    --color-text-subtle:     var(--ink-400);
+    --color-text-inverse:    var(--ink-900);
+    --color-text-signal:     var(--signal-500);
+
+    --color-rule:            var(--ink-700);
+    --color-rule-strong:     var(--ink-100);
+    --color-border:          var(--ink-600);
+
+    --color-link:            var(--signal-500);
+    --color-link-hover:      var(--signal-500);
+    --color-link-visited:    var(--signal-500);
+
+    --control-bg:            var(--paper);
+    --control-bg-hover:      var(--ink-100);
+    --control-bg-active:     var(--ink-200);
+    --control-fg:            var(--ink-900);
+    --control-border:        var(--paper);
+    --control-disabled-bg:   var(--ink-700);
+    --control-disabled-fg:   var(--ink-500);
+
+    --control-ghost-bg-hover: var(--ink-800);
+    --control-ghost-fg:       var(--paper);
+    --control-ghost-border:   var(--paper);
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg:              var(--ink-900);
+  --color-bg-elevated:     var(--ink-800);
+  --color-bg-inverse:      var(--paper);
+  --color-bg-muted:        var(--ink-700);
+
+  --color-text:            var(--paper);
+  --color-text-muted:      var(--ink-300);
+  --color-text-subtle:     var(--ink-400);
+  --color-text-inverse:    var(--ink-900);
+  --color-text-signal:     var(--signal-500);
+
+  --color-rule:            var(--ink-700);
+  --color-rule-strong:     var(--ink-100);
+  --color-border:          var(--ink-600);
+
+  --color-link:            var(--signal-500);
+  --color-link-hover:      var(--signal-500);
+  --color-link-visited:    var(--signal-500);
+
+  --control-bg:            var(--paper);
+  --control-bg-hover:      var(--ink-100);
+  --control-bg-active:     var(--ink-200);
+  --control-fg:            var(--ink-900);
+  --control-border:        var(--paper);
+  --control-disabled-bg:   var(--ink-700);
+  --control-disabled-fg:   var(--ink-500);
+
+  --control-ghost-bg-hover: var(--ink-800);
+  --control-ghost-fg:       var(--paper);
+  --control-ghost-border:   var(--paper);
+}

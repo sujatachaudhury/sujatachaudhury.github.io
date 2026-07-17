@@ -1,112 +1,147 @@
-import Image from 'next/image';
-import { getTranslationsFromProps, LocalizationProps, locales } from '@/i18n';
-import { Eyes, ActionItem, Socials } from '@/components';
-import stylesheet from '@/tokens/stylesheet.module.css';
-import styles from './page.module.css';
+import type { Metadata } from "next";
+import Image from "next/image";
+import {
+  activeLocales,
+  createTranslator,
+  isLocale,
+  loadMessages,
+  localeMeta,
+  type Locale,
+} from "@/lib/i18n";
+import { Section } from "@/components/layout";
+import { Button, TextLink } from "@/components/primitives";
+import { profile } from "@/content/profile";
+import { PersonJsonLd, WebSiteJsonLd } from "@/lib/seo/jsonld";
+import styles from "./landing.module.css";
 
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    locale,
-  }));
+export function generateStaticParams() {
+  return activeLocales.map((locale) => ({ locale }));
 }
 
-export default async function Page(props: LocalizationProps) {
-  const translation = await getTranslationsFromProps(props);
+interface Props {
+  params: Promise<{ locale: string }>;
+}
 
-  return <main className={styles.container}>
-    <header className={styles.header}>
-      <h1 className={styles.title}>
-        {translation.main.title}
-      </h1>
-      <p className={styles.tagline}>
-        {translation.main.tagline}
-      </p>
-    </header>
-    <div className={styles.content}>
-      <div className={styles.firstSection}>
-        <div className={styles.firstSectionTitle}>
-          <p>{translation.main.sections.first.title}</p>
-          <Eyes />
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  const messages = await loadMessages(locale, ["common", "landing"]);
+  const t = createTranslator(locale, messages);
+  return {
+    title: t("site.name"),
+    description: t("hero.summary", { years: profile.yearsOfIndustryExperience }),
+    alternates: {
+      canonical: `/${locale}/`,
+      languages: Object.fromEntries(
+        activeLocales.map((code) => [localeMeta[code].bcp47, `/${code}/`]),
+      ),
+    },
+  };
+}
+
+export default async function LandingPage({ params }: Props) {
+  const { locale } = await params;
+  if (!isLocale(locale)) return null;
+  const messages = await loadMessages(locale as Locale, ["common", "landing"]);
+  const t = createTranslator(locale as Locale, messages);
+
+  return (
+    <>
+      <PersonJsonLd />
+      <WebSiteJsonLd />
+      <Section labelledBy="hero-title" className={styles.hero}>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroLead}>
+            <p className={`eyebrow ${styles.eyebrow}`}>{t("hero.eyebrow")}</p>
+            <h1 id="hero-title" className={styles.heroTitle}>
+              {t("hero.title")}
+            </h1>
+          </div>
+          <div className={styles.heroBody}>
+            <p className={styles.heroSummary}>
+              {t("hero.summary", { years: profile.yearsOfIndustryExperience })}
+            </p>
+            <div className={styles.heroCta}>
+              <Button href={`mailto:${profile.email}`} size="lg">
+                {t("hero.cta.primary")}
+              </Button>
+              <TextLink href={`/${locale}/work`}>{t("hero.cta.secondary")}</TextLink>
+            </div>
+          </div>
+          <figure className={styles.portrait}>
+            <Image
+              className={styles.portraitImage}
+              src={profile.photo.src}
+              alt={profile.photo.alt}
+              width={800}
+              height={1000}
+              priority
+              sizes="(max-width: 860px) 80vw, 360px"
+            />
+            <figcaption className={styles.portraitCaption}>
+              {profile.location.city}, {profile.location.country}
+            </figcaption>
+          </figure>
         </div>
-        <p className={styles.firstSectionSubtitle}>
-          {translation.main.sections.first.subtitle}
-        </p>
-      </div>
-      <div>
-        <p className={`${stylesheet.h3} ${stylesheet.textInverse}`}>{translation.main.sections.publications.title}</p>
-        <hr />
-        <ActionItem items={[
-          {
-            title: "Improving performance of Recurrent Neural Networks for Question-Answering with Attention-based Context Reduction",
-            url: "https://ieeexplore.ieee.org/abstract/document/9641626",
-            authors: "Sagnik Modak; Sujata Chaudhury; Abhishek Rawat; Suman Deb",
-            props: {
-              date: "October, 2021",
-              publisher: "IEEE",
-              journal: "IEEE MysuruCon 2021",
-              doi: "DOI: 10.1109/MysuruCon52639.2021.9641626"
-            }
-          }
-        ]} />
-      </div>
-      <div>
-        <p className={`${stylesheet.h3} ${stylesheet.textInverse}`}>{translation.main.sections.degrees.title}</p>
-        <hr />
-        <ActionItem items={[
-          {
-            title: "Masters in Image Modeling and Data Intensive Imaging",
-            props: {
-              date: "2024 - Present",
-              program: "Erasmus Mundus Joint Masters in Imaging",
-              institution: "University of Tampere",
-              location: "Tampere, Finland"
-            }
-          },
-          {
-            title: "Bachelors of Technology in Computer Science and Engineering",
-            props: {
-              date: "2017 - 2021",
-              institution: "National Institute of Technology, Agartala",
-              location: "Tripura, India"
-            }
-          }
-        ]} />
-      </div>
-      <div>
-        <p className={`${stylesheet.h3} ${stylesheet.textInverse}`}>{translation.main.sections.experience.title}</p>
-        <hr />
-        <ActionItem items={[
-          {
-            title: "Software Developer",
-            props: {
-              date: "2021 - 2024",
-              company: "Optum",
-              location: "Bangalore, Karnataka, India"
-            }
-          }
-        ]} />
-      </div>
-      <div>
-        <p className={`${stylesheet.h3} ${stylesheet.textInverse}`}>{translation.main.sections.socials.title}</p>
-        <hr />
-        <Socials socials={[
-          {
-            name: translation.main.sections.socials.linkedin,
-            url: "https://linkedin.com/in/sujata-chaudhury",
-            icon: <Image src="/assets/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-          },
-          {
-            name: translation.main.sections.socials.github,
-            url: "https://github.com/sujatachaudhury",
-            icon: <Image src="/assets/github.svg" alt="GitHub" width={20} height={20} />
-          },
-          {
-            name: translation.main.sections.socials.email,
-            url: "mailto:sujata.chaudhury@gmail.com",
-            icon: <Image src="/assets/gmail.svg" alt="Email" width={20} height={20} />
-          }
-        ]} />
-      </div>
-    </div>
-  </main>;
-};
+      </Section>
+
+      <Section labelledBy="signals-title" className={styles.signals}>
+        <p className="eyebrow">{t("signals.title")}</p>
+        <div className={styles.signalGrid} role="list">
+          <div className={styles.signalCard} role="listitem">
+            <p className="eyebrow">{t("signals.education.eyebrow")}</p>
+            <h3>{t("signals.education.title")}</h3>
+            <p>{t("signals.education.body")}</p>
+          </div>
+          <div className={styles.signalCard} role="listitem">
+            <p className="eyebrow">{t("signals.industry.eyebrow")}</p>
+            <h3>{t("signals.industry.title")}</h3>
+            <p>{t("signals.industry.body")}</p>
+          </div>
+          <div className={styles.signalCard} role="listitem">
+            <p className="eyebrow">{t("signals.research.eyebrow")}</p>
+            <h3>{t("signals.research.title")}</h3>
+            <p>{t("signals.research.body")}</p>
+          </div>
+        </div>
+      </Section>
+
+      <Section labelledBy="focus-title" className={styles.focus}>
+        <h2 id="focus-title">{t("focus.title")}</h2>
+        <p className={styles.focusIntro}>{t("focus.intro")}</p>
+        <ul className={styles.focusList} role="list">
+          <li className={styles.focusItem}>
+            <h3 className={styles.focusTitle}>{t("focus.items.cv.title")}</h3>
+            <p className={styles.focusBody}>{t("focus.items.cv.body")}</p>
+          </li>
+          <li className={styles.focusItem}>
+            <h3 className={styles.focusTitle}>{t("focus.items.ml.title")}</h3>
+            <p className={styles.focusBody}>{t("focus.items.ml.body")}</p>
+          </li>
+          <li className={styles.focusItem}>
+            <h3 className={styles.focusTitle}>{t("focus.items.systems.title")}</h3>
+            <p className={styles.focusBody}>{t("focus.items.systems.body")}</p>
+          </li>
+        </ul>
+      </Section>
+
+      <Section labelledBy="contact-title" className={styles.contact}>
+        <div className={styles.contactHead}>
+          <p className="eyebrow">{t("contact.eyebrow")}</p>
+          <div>
+            <h2 id="contact-title">{t("contact.title")}</h2>
+            <p>{t("contact.body")}</p>
+          </div>
+        </div>
+        <dl className={styles.contactList}>
+          <dt>{t("contact.email.label")}</dt>
+          <dd>
+            <TextLink href={`mailto:${profile.email}`}>{t("contact.email.value")}</TextLink>
+          </dd>
+          <dt>{t("contact.location.label")}</dt>
+          <dd>{t("contact.location.value")}</dd>
+        </dl>
+      </Section>
+    </>
+  );
+}

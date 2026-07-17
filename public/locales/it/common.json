@@ -1,0 +1,19 @@
+{
+  "site.name": "[mt] Sujata Chaudhury",
+  "site.role": "[mt] ML & Computer Vision Engineer",
+  "site.tagline": "[mt] L'apprendimento automatico, la visione informatica e tutto il resto.",
+  "nav.home": "[mt] Home",
+  "nav.work": "[mt] Lavorare",
+  "nav.projects": "[mt] Progetti",
+  "nav.contact": "[mt] Contatto",
+  "a11y.skip": "[mt] Salta al contenuto",
+  "a11y.langSwitcher": "[mt] Cambiare la lingua",
+  "a11y.themeLight": "[mt] Passare alla modalità di luce",
+  "a11y.themeDark": "[mt] Passare alla modalità oscura",
+  "footer.tagline": "[mt] Costruito a mano a Tampere.",
+  "footer.colophon": "[mt] Setting in Fraunces e IBM Plex. © {year} Sujata Chaudhury.",
+  "footer.links.email": "[mt] E-mail",
+  "footer.links.linkedin": "[mt] LinkedIn",
+  "footer.links.github": "[mt] GitHub",
+  "footer.links.resume": "[mt] Résumé"
+}

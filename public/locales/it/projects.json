@@ -1,0 +1,23 @@
+{
+  "page.title": "[mt] Progetti",
+  "page.summary": "[mt] Ho scelto un lavoro che incontra la visione computerizzata, la geometria e l'apprendimento automatico.",
+  "meta.stack": "[mt] Stack",
+  "meta.role": "[mt] Il mio ruolo",
+  "meta.status": "[mt] Statuto",
+  "meta.year": "[mt] Anno",
+  "meta.source": "[mt] Fonte",
+  "meta.link": "[mt] Link",
+  "status.published": "[mt] Pubblicato",
+  "status.thesis": "[mt] Tesisi",
+  "status.coursework": "[mt] Lavorare",
+  "status.industry": "[mt] Industria",
+  "items.vehicles.title": "[mt] Analisi visiva dei veicoli in movimento",
+  "items.vehicles.summary": "[mt] Un quadro geometrico per l'analisi del movimento dei veicoli e la rilevazione delle collisioni, basato sulla ricostruzione 3D e sulla geometria proiettrice.",
+  "items.vehicles.body": "[mt] Le linee di rilevamento delle collisioni esistenti si basano su caratteristiche di movimento o reti profonde. Questo progetto prende un percorso diverso: data l'intrinseca della fotocamera conosciuta e le dimensioni standard del veicolo, i fari diventano punti di riferimento affidabili. Da questi, la geometria proiettiva produce punti di scomparsa, l'orientamento del veicolo e  attraverso la proiezione retro e la legge dei cosini  distanza tra veicoli nel mondo reale.",
+  "items.survival.title": "[mt] Calcificazione cardiaca e sopravvivenza in radioterapia per il cancro al polmone",
+  "items.survival.summary": "[mt] Le regioni calcificate sono state estratti dalle scansioni CT tramite segmentazione delle immagini, poi sono stati valutati i loro effetti sulla sopravvivenza del paziente con l' analisi Cox proporzionale dei rischi.",
+  "items.survival.body": "[mt] Scoring automatico di calcificazione cardiaca in stile Agatston da immagini CT DICOM in Python, abbinato all'analisi della sopravvivenza in R. Il pipeline trasforma i biomarcatori di imaging in predittori statisticamente verificabili della sopravvivenza complessiva per i pazienti con cancro al polmone sottoposti a radioterapia.",
+  "items.mars.title": "[mt] Segmentazione del terreno di Marte",
+  "items.mars.summary": "[mt] Un modello di deep learning per la classificazione a livello di pixel del terreno di Marte, allineato per un'intersezione media superiore all'unione.",
+  "items.mars.body": "[mt] Ha allenato e valutato un'architettura di segmentazione sulle immagini orbitali di Marte, ottenendo un alto MIoU in tutte le classi di terreno."
+}

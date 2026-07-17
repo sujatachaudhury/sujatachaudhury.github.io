@@ -1,0 +1,19 @@
+{
+  "site.name": "[mt] सुजाता चौधरी",
+  "site.role": "[mt] एमएल और कंप्यूटर विजन इंजीनियर",
+  "site.tagline": "[mt] मशीन लर्निंग, कंप्यूटर विजन, और इसके बीच की हर चीज।",
+  "nav.home": "[mt] घर",
+  "nav.work": "[mt] कार्य",
+  "nav.projects": "[mt] परियोजनाएं",
+  "nav.contact": "[mt] संपर्क",
+  "a11y.skip": "[mt] सामग्री पर स्किप करें",
+  "a11y.langSwitcher": "[mt] भाषा बदलें",
+  "a11y.themeLight": "[mt] प्रकाश मोड पर स्विच करें",
+  "a11y.themeDark": "[mt] अंधेरे मोड पर स्विच करें",
+  "footer.tagline": "[mt] टैम्पेरे में हाथ से बनाया गया।",
+  "footer.colophon": "[mt] Fraunces और IBM Plex में सेट किया गया है। © {year} सुजाता चौधरी।",
+  "footer.links.email": "[mt] ईमेल",
+  "footer.links.linkedin": "[mt] लिंक्डइन",
+  "footer.links.github": "[mt] GitHub",
+  "footer.links.resume": "[mt] संक्षिप्त विवरण"
+}
