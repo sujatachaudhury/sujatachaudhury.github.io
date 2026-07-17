@@ -1,15 +1,18 @@
 #!/usr/bin/env node
 /**
  * generate-sitemap.mjs — postbuild step. Writes dist/sitemap.xml with one URL
- * per (locale, route) pair plus hreflang alternates. Runs against a static
- * list of routes; kept simple on purpose so a future page addition is a
- * single-line change here.
+ * per (locale, route) pair plus hreflang alternates.
+ *
+ * Locales come from src/lib/i18n/config.ts#activeLocales so the sitemap can't
+ * drift from what the site actually serves. Adding a page is still a
+ * one-line change to the `routes` array below.
  */
+import { readActiveLocales } from "./lib/locales.mjs";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const SITE = "https://sujatachaudhury.github.io";
-const activeLocales = ["en"];
+const activeLocales = await readActiveLocales();
 const routes = ["", "work", "projects"];
 
 const urls = activeLocales.flatMap((locale) =>
