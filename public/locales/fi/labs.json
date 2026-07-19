@@ -12,6 +12,7 @@
   "chat.disclosure.start": "[mt] Aloita",
   "chat.disclosure.dismiss": "[mt] Ei nyt.",
   "chat.webgpuMissing": "[mt] WebGPU ei ole käytettävissä tässä selaimessa. Kokeile Chromea, Edgeia tai Firefoxia työpöydällä.",
+  "chat.error.network": "[mt] Muodelin lataus keskeytettiin. Tarkista yhteys tai poista mainosblokki/lähennys, joka saattaa estää huggingface.co, ja napsauta sitten Aloita yrittää uudelleen.",
   "chat.seed": "[mt] Voin vastata kysymyksiin Sujatasta, - joka toimii paikallisesti.",
   "chat.refusal": "[mt] Kysyn vain Sujatasta kokemuksista, työstä ja hankkeista.",
   "chat.label.user": "[mt] Sinä olet",

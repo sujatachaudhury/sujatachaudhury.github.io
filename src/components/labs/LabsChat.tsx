@@ -49,6 +49,7 @@ interface Strings {
 
   progressReady: string;
   webgpuMissing: string;
+  errorNetwork: string;
 }
 
 export function LabsChat({ strings }: { strings: Strings }) {
@@ -155,7 +156,11 @@ export function LabsChat({ strings }: { strings: Strings }) {
               ))}
             </ul>
             {ctrl.webgpuAvailable === false && <p style={{ color: "var(--color-error)" }}>{strings.webgpuMissing}</p>}
-            {ctrl.error && <p style={{ color: "var(--color-error)" }}>{ctrl.error}</p>}
+            {ctrl.error && (
+              <p style={{ color: "var(--color-error)" }}>
+                {ctrl.errorKind === "network" ? strings.errorNetwork : ctrl.error}
+              </p>
+            )}
             <div style={{ display: "flex", gap: "12px" }}>
               <button
                 type="button"

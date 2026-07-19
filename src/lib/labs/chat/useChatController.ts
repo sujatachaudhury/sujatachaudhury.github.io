@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ChatEngine, detectWebGPU, type ChatMessage } from "./engine";
+import { ChatEngine, detectWebGPU, isDownloadNetworkError, type ChatMessage } from "./engine";
 import { hasConsented, recordConsent } from "./consent";
 import { buildPromptMessages, primeRetrieval, REFUSAL_MESSAGE, retrieve } from "./retrieval";
 import { TranscriptStore, type Turn } from "./transcript-store";
@@ -41,6 +41,7 @@ interface ControllerState {
   voiceEnabled: boolean;
   voiceLoading: boolean;
   error: string | null;
+  errorKind: "network" | "generic" | null;
 }
 
 export interface ChatController extends ControllerState {
@@ -72,6 +73,7 @@ const INITIAL: ControllerState = {
   voiceEnabled: false,
   voiceLoading: false,
   error: null,
+  errorKind: null,
 };
 
 export function useChatController(): ChatController {
@@ -160,7 +162,10 @@ export function useChatController(): ChatController {
     setState((s) => ({ ...s, uiMode: s.uiMode === "compact" ? "expanded" : "compact" }));
   }, []);
 
-  const clearError = useCallback(() => merge({ error: null, phase: engineRef.current?.isReady() ? "ready" : "dormant" }), []);
+  const clearError = useCallback(
+    () => merge({ error: null, errorKind: null, phase: engineRef.current?.isReady() ? "ready" : "dormant" }),
+    [],
+  );
 
   const start = useCallback(async () => {
     if (state.phase !== "dormant" && state.phase !== "error") return;
@@ -194,7 +199,11 @@ export function useChatController(): ChatController {
       void primingStt;
       merge({ phase: "ready", progress: 1, progressCaption: "" });
     } catch (err) {
-      merge({ phase: "error", error: err instanceof Error ? err.message : "Failed to load model." });
+      merge({
+        phase: "error",
+        error: err instanceof Error ? err.message : "Failed to load model.",
+        errorKind: isDownloadNetworkError(err) ? "network" : "generic",
+      });
     }
   }, [state.phase, state.webgpuAvailable]);
   // Keep a mutable ref to `start` so `open()` can invoke it without
@@ -236,6 +245,7 @@ export function useChatController(): ChatController {
         merge({
           phase: "error",
           error: err instanceof Error ? err.message : "Retrieval failed.",
+          errorKind: isDownloadNetworkError(err) ? "network" : "generic",
         });
         return null;
       }
@@ -273,6 +283,7 @@ export function useChatController(): ChatController {
         merge({
           phase: "error",
           error: err instanceof Error ? err.message : "Generation failed.",
+          errorKind: isDownloadNetworkError(err) ? "network" : "generic",
         });
         return null;
       }
@@ -478,6 +489,7 @@ export function useChatController(): ChatController {
         voiceEnabled: false,
         mode: "text",
         error: err instanceof Error ? err.message : "Couldn't enable voice.",
+        errorKind: isDownloadNetworkError(err) ? "network" : "generic",
       });
     }
   }, [state.voiceEnabled, state.voiceLoading, runQuery]);

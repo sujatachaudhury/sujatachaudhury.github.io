@@ -74,6 +74,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     voiceBackToChat: t("chat.voice.backToChat"),
     progressReady: t("chat.progress.ready"),
     webgpuMissing: t("chat.webgpuMissing"),
+    errorNetwork: t("chat.error.network"),
   };
 
   const langOptions: LangOption[] = activeLocales.map((code) => ({

@@ -15,6 +15,7 @@
   "chat.disclosure.dismiss": "Not now",
 
   "chat.webgpuMissing": "WebGPU isn't available in this browser. Try Chrome, Edge, or Firefox on desktop.",
+  "chat.error.network": "The model download was interrupted. Check your connection, or disable an ad blocker/extension that may be blocking huggingface.co, then click Start to try again.",
 
   "chat.seed": "I can answer questions about Sujata's background, projects, and experience. Everything runs locally in your browser.",
   "chat.refusal": "I only answer questions about Sujata's background, work, and projects. Try asking about her experience at Optum, her research, or her Master's at Tampere.",

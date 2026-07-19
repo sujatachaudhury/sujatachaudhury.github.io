@@ -36,6 +36,10 @@ interface GPULike {
   requestAdapter: () => Promise<unknown>;
 }
 
+export function isDownloadNetworkError(err: unknown): boolean {
+  return err instanceof Error && /cache\.add\(\)|failed to fetch|networkerror/i.test(err.message);
+}
+
 export async function detectWebGPU(): Promise<boolean> {
   if (typeof navigator === "undefined") return false;
   const gpu = (navigator as Navigator & { gpu?: GPULike }).gpu;
