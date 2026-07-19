@@ -23,6 +23,7 @@ export const projects: readonly Project[] = [
     stack: ["Python", "OpenCV", "NumPy", "Projective geometry"],
     status: "coursework",
     image: { src: "/assets/project-images/vehicle-detection.png", alt: "Vehicle detection visualization" },
+    href: "https://github.com/sujatachaudhury/self-supervised-denoising"
   },
   {
     id: "survival",
@@ -31,13 +32,23 @@ export const projects: readonly Project[] = [
     stack: ["Python", "R", "DICOM", "Cox PH"],
     status: "coursework",
     image: { src: "/assets/project-images/survival-analysis.png", alt: "Cardiac calcification survival analysis" },
+    href: "https://github.com/sujatachaudhury/survival-analysis-cox-model"
   },
   {
-    id: "mars",
-    key: "items.mars",
-    year: "2024",
-    stack: ["PyTorch", "Segmentation", "MIoU"],
+    id: "self-supervise",
+    key: "items.self-supervise",
+    year: "2026",
+    stack: ["Python", "TensorFlow", "Docker"],
     status: "coursework",
-    image: null,
+    image: { src: "/assets/project-images/self-supervised-denoising.png", alt: "Self Supervised Denoising Methods Comparison" },
+    href: "https://github.com/sujatachaudhury/vehicle-detection"
   },
+  // {
+  //   id: "mars",
+  //   key: "items.mars",
+  //   year: "2024",
+  //   stack: ["PyTorch", "Segmentation", "MIoU"],
+  //   status: "coursework",
+  //   image: null,
+  // },
 ] as const;

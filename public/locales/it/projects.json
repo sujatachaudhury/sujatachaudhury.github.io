@@ -19,5 +19,8 @@
   "items.survival.body": "[mt] Scoring automatico di calcificazione cardiaca in stile Agatston da immagini CT DICOM in Python, abbinato all'analisi della sopravvivenza in R. Il pipeline trasforma i biomarcatori di imaging in predittori statisticamente verificabili della sopravvivenza complessiva per i pazienti con cancro al polmone sottoposti a radioterapia.",
   "items.mars.title": "[mt] Segmentazione del terreno di Marte",
   "items.mars.summary": "[mt] Un modello di deep learning per la classificazione a livello di pixel del terreno di Marte, allineato per un'intersezione media superiore all'unione.",
-  "items.mars.body": "[mt] Ha allenato e valutato un'architettura di segmentazione sulle immagini orbitali di Marte, ottenendo un alto MIoU in tutte le classi di terreno."
+  "items.mars.body": "[mt] Ha allenato e valutato un'architettura di segmentazione sulle immagini orbitali di Marte, ottenendo un alto MIoU in tutte le classi di terreno.",
+  "items.self-supervise.title": "[mt] Denoising auto-supervisionato",
+  "items.self-supervise.summary": "[mt] Implementazione e confronto di tre metodi di denoising auto-supervisionato.",
+  "items.self-supervise.body": "[mt] Gli algoritmi auto-supervisionati non richiedono dati di addestramento puliti. Tre algoritmi auto-supervisionati e non supervisionati (Deep Image Prior (DIP), Self2Self, Neighbor2Neighbor) sono stati implementati in TensorFlow e i risultati sono stati confrontati."
 }

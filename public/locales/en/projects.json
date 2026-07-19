@@ -24,5 +24,9 @@
 
   "items.mars.title": "Segmentation of Mars terrain",
   "items.mars.summary": "A deep-learning model for pixel-level classification of Mars terrain, tuned for high mean intersection-over-union.",
-  "items.mars.body": "Trained and evaluated a segmentation architecture on Mars orbital imagery, achieving high MIoU across terrain classes. Emphasis on class balance, augmentation strategy, and boundary-aware loss."
+  "items.mars.body": "Trained and evaluated a segmentation architecture on Mars orbital imagery, achieving high MIoU across terrain classes. Emphasis on class balance, augmentation strategy, and boundary-aware loss.",
+
+  "items.self-supervise.title": "Self Supervised Denoising",
+  "items.self-supervise.summary": "Implementation and comparison of three self supervised denoising methods.",
+  "items.self-supervise.body": "Self Supervised algorithms don't require clean training data. Three self-supervised and unsupervised algorithms (Deep Image Prior (DIP), Self2Self, Neighbor2Neighbor) were implemented in tensorflow and results were compared."
 }

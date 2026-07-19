@@ -61,6 +61,7 @@
   overflow: hidden;
   background: var(--color-bg-muted);
   align-self: center;
+  width: 350px;
 }
 
 .portrait::after {

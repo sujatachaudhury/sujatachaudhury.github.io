@@ -19,5 +19,8 @@
   "items.survival.body": "[mt] Die automatische Akzentbildung von Herzkalzifizierung im Agatston-Stil aus CT-DICOM-Bildern in Python, in Verbindung mit Überlebensanalyse in R. Die Pipeline verwandelt die Bildgebung in statistisch überprüfbare Prädiktoren des Gesamtüberlebens von Lungenkrebspatienten, die sich einer Strahlentherapie unterziehen.",
   "items.mars.title": "[mt] Segmentierung des Mars-Terrain",
   "items.mars.summary": "[mt] Ein tieflerne Lernmodell für die Pixel-Ebene-Klassifizierung des Mars-Terrain, abgestimmt auf hohe Mittel-Schnitt-über-Union.",
-  "items.mars.body": "[mt] Er trainierte und bewertete eine Segmentierungsarchitektur auf Mars-Orbitalbildern, die eine hohe MIoU in allen Gelände-Klassen erzielte."
+  "items.mars.body": "[mt] Er trainierte und bewertete eine Segmentierungsarchitektur auf Mars-Orbitalbildern, die eine hohe MIoU in allen Gelände-Klassen erzielte.",
+  "items.self-supervise.title": "[mt] Selbstüberwachte Entrauschung",
+  "items.self-supervise.summary": "[mt] Implementierung und Vergleich von drei selbstüberwachten Entrauschungsmethoden.",
+  "items.self-supervise.body": "[mt] Selbstüberwachte Algorithmen benötigen keine sauberen Trainingsdaten. Drei selbstüberwachte und unüberwachte Algorithmen (Deep Image Prior (DIP), Self2Self, Neighbor2Neighbor) wurden in TensorFlow implementiert und die Ergebnisse verglichen."
 }

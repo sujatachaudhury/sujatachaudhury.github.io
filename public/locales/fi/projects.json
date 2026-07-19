@@ -19,5 +19,8 @@
   "items.survival.body": "[mt] Automaattinen Agatston-tyypin sydänkalsifioinnin pisteytys CT DICOM-kuvista Pythonissa, yhdistettynä selviytymisen analyysiin R:ssä. Putki muuttaa kuvia käyttävien biomarkerit tilastollisesti testaaviksi ennusteiksi säteilyhoitoon osallistuvien keuhkosyöpäpotilaiden yleisestä selviytymisestä.",
   "items.mars.title": "[mt] Marsilla sijaitsevan maan segmentointi",
   "items.mars.summary": "[mt] Syvä oppimiskodelista pixelitasolla luokiteltavaa Marsin maaperän, joka on sovittu korkean keskiarvon ristiriidassa.",
-  "items.mars.body": "[mt] Koulutettiin ja arvioitiin marsin kiertoradan kuvausten segmenttiarkitektuuri, jossa saavutettiin korkeat MIoU:t maantieteellisten luokkien välillä."
+  "items.mars.body": "[mt] Koulutettiin ja arvioitiin marsin kiertoradan kuvausten segmenttiarkitektuuri, jossa saavutettiin korkeat MIoU:t maantieteellisten luokkien välillä.",
+  "items.self-supervise.title": "[mt] Itseohjautuva kohinanpoisto",
+  "items.self-supervise.summary": "[mt] Kolmen itseohjautuvan kohinanpoistomenetelmän toteutus ja vertailu.",
+  "items.self-supervise.body": "[mt] Itseohjautuvat algoritmit eivät vaadi puhdasta opetusdataa. Kolme itseohjautuvaa ja ohjaamatonta algoritmia (Deep Image Prior (DIP), Self2Self, Neighbor2Neighbor) toteutettiin TensorFlow'lla ja tuloksia verrattiin."
 }

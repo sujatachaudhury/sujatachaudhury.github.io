@@ -71,7 +71,7 @@ export default async function ProjectsPage({ params }: Props) {
                 <Tag>{project.year}</Tag>
                 <Tag>{t(`status.${project.status}`)}</Tag>
               </div>
-              <h2 className={styles.projectTitle}>{t(`${project.key}.title`)}</h2>
+              <h2 className={styles.projectTitle}><a href={project.href} style={{textDecoration:"none"}}>{t(`${project.key}.title`)}</a></h2>
               <p className={styles.projectSummary}>{t(`${project.key}.summary`)}</p>
               <p className={styles.projectBody}>{t(`${project.key}.body`)}</p>
               <div className={styles.stack}>
