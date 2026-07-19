@@ -65,7 +65,7 @@ export default async function LandingPage({ params }: Props) {
               <Button href={`mailto:${profile.email}`} size="lg">
                 {t("hero.cta.primary")}
               </Button>
-              <TextLink href={`/${locale}/work`}>{t("hero.cta.secondary")}</TextLink>
+              <Button href={`/${locale}/work`} size="lg" variant="ghost">{t("hero.cta.secondary")}</Button>
             </div>
           </div>
           <figure className={styles.portrait}>

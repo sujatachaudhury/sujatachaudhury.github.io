@@ -44,8 +44,8 @@
   /* Ghost control */
   --control-ghost-bg:        transparent;
   --control-ghost-bg-hover:  var(--ink-100);
-  --control-ghost-fg:        var(--ink-900);
-  --control-ghost-border:    var(--ink-900);
+  --control-ghost-fg:        var(--color-text-signal);
+  --control-ghost-border:    var(--color-text-signal);
 
   /* State */
   --color-error:           var(--danger-500);
